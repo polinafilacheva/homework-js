@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <script src="jquery.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+
+  $(function() {
+    $('button').click(function() {
+      var wrap = $('.wrap');
+      if($(wrap).css('-webkit-transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
+        $(wrap).css({'-webkit-transform':'rotateY(180deg)'});
+      } else {
+        $(wrap).css({'-webkit-transform':'rotateY(0deg)'});
+      }
+    });
+  });
+
+</script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="front">Люблю учиться</div>
+      <div class="back">Ненавижу учиться</div>
+    </div>
+    <button>Жми</button>
+
+  </body>
+</html>
